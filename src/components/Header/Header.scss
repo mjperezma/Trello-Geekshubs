@@ -1,0 +1,16 @@
+.header {
+
+    background-color: rgb(39, 39, 207);
+    height: 4.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    &__icon {
+        width: 2rem;
+        padding-left: 0.3rem;
+        height: auto;
+    }
+}
