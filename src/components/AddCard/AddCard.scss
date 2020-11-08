@@ -1,0 +1,11 @@
+.task__section {
+    display: flex;
+    justify-content: center;
+
+    &__input {
+        padding: 0.5rem;
+        margin: 0.5rem;
+        border-radius: 0.5rem;
+        border: 0.1rem solid rgb(89, 87, 212);
+    }
+}

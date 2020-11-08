@@ -1,4 +1,4 @@
-const initialCard = {
+const initialState = {
   visibility: 'ALL',
   cards: [
     {
@@ -16,22 +16,29 @@ const initialCard = {
   ],
 };
 
-function reducer(state = initialCard, action) {
+function reducerList(state = initialState, action) {
   switch (action.type) {
     case 'ADD_CARD':
       return {
         ...state,
-        card: [
-          ...state.card,
+        cards: [
+          ...state.cards,
           {
             text: action.payload,
             id: action.id,
           },
         ],
       };
+
+    case 'DELETE_TODO':
+      return {
+        ...state,
+        cards: state.cards.filter((card) => card.id !== action.payload),
+      };
+
     default:
       return state;
   }
 }
 
-export default reducer;
+export default reducerList;
